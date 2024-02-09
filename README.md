@@ -2,6 +2,6 @@
 
 # *This is a simple implementationn of the otpless sdk for a basic website's authentication process in Javascript.*
 
-*By- Prathmesh Marathe *
+By- Prathmesh Marathe
 
-*Enrolment no.: 2203031310017*
+Enrollment number: 2203031310012
