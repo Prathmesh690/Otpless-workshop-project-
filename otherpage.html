@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Page</title>
+  <style>
+    /* Styling for the data container and logout button */
+    #data-container {
+      border: 2px solid #4CAF50;
+      background-color: #f8f8f8;
+      padding: 20px;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Display the otpless object's data from localStorage in a styled container -->
+  <div id="data-container"></div>
+
+  
+  <script>
+    // Retrieve data from localStorage
+    const otplessUserData = localStorage.getItem('otplessUserData');
+
+    // Display the data in the container
+    const dataContainer = document.getElementById('data-container');
+    dataContainer.innerHTML = `<h2>USER's INFO</h2><pre>${otplessUserData}</pre>`;
+
+    // Add click event listener to the logout button
+    document.getElementById('logout-button').addEventListener('click', function() {
+      // Clear localStorage
+      localStorage.removeItem('otplessUserData');
+
+    });
+  </script>
+</body>
+</html>

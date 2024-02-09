@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://otpless.com/favicon.ico" />
+    <title>OTPless Login Page</title>
+</head>
+<body>
+    <!-- Adding a div with ids to get login page of otpless -->
+    <div id="otpless-login-page"></div>
+    <!-- Adding OTPless SDK replace YOUR_CID_HERE with your 'cid' -->
+    <script type="text/javascript" src="https://otpless.com/auth.js" cid="XZ2V53GKZEQ554GXIYO4HJZD35FT80F9"></script>
+
+    <!-- Implement the following script to retrieve and log the user's information. -->
+    <script type="text/javascript"> 
+        function otpless(otplessUser) {
+         console.log(JSON.stringify(otplessUser));
+
+        //  OPTIONAL STEPS
+          // Store data according to you to validate the user at backend with our CURl or package
+         localStorage.setItem('otplessUserData', JSON.stringify(otplessUser));
+
+         // Redirect to another page (replace 'otherpage.html' with the actual filename)
+         window.location.href = 'otherpage.html';
+        }
+    </script>
+
+</body>
+</html>
